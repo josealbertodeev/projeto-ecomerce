@@ -1,4 +1,136 @@
-h1{
-    color: brown;
-    font-size: 100px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #FF4111;
+    --cor-secundaria: #2C3E50;
+    --cor-de-destaque: #3498DB;
+    --cor-do-texto: #2C3E50;
+    --cinza-claro: #F8F9FA;
+    --cor-da-borda: #E9ECEF;
+    --cor-branca: #FFFFFF;
+    --hover-botao: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-do-texto);
+    background-color: var(--cinza-claro);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--cor-branca);
+    position: sticky;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+.pesquisa-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 2rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--cinza-claro);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.pesquisa-container input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.pesquisa-container i {
+    color: var(--cor-primaria);
+}
+
+.categorias-container {
+    background-color: var(--cor-secundaria);
+}
+
+.categorias-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.categoria-botao {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    border: none;
+    color: var(--cor-branca);
+    border-radius: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    background: none;
+}
+
+..categoria-botao i {
+    font-size: 1.2rem;
+}
+
+.categoria-botao:hover {
+    background-color: var(--hover-botao);
+}
+
+.categoria-botao.ativo {
+    background-color: var(--cor-primaria);
+}
+
+.hero-secao {
+    background: #e36646;
+    background: linear-gradient(90deg, rgba(227, 102, 70, 1) 0%, rgba(86, 122, 184, 1) 100%);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 3rem 2rem;    
+}
+
+.hero-secao h2{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-secao p{
+    font-size: 1.2rem;
+}
+
+footer{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 2rem;
 }
