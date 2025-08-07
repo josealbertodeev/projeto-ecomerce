@@ -75,6 +75,8 @@ header {
 
 .categorias-container {
     background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
 }
 
 .categorias-menu {
@@ -99,7 +101,7 @@ header {
     background: none;
 }
 
-..categoria-botao i {
+.categoria-botao i {
     font-size: 1.2rem;
 }
 
@@ -116,21 +118,95 @@ header {
     background: linear-gradient(90deg, rgba(227, 102, 70, 1) 0%, rgba(86, 122, 184, 1) 100%);
     color: var(--cor-branca);
     text-align: center;
-    padding: 3rem 2rem;    
+    padding: 3rem 2rem;
 }
 
-.hero-secao h2{
+.hero-secao h2 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
-.hero-secao p{
+.hero-secao p {
     font-size: 1.2rem;
 }
 
-footer{
+footer {
     background-color: var(--cor-secundaria);
     color: var(--cor-branca);
     text-align: center;
     padding: 2rem;
+}
+
+.produtos {
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+    gap: 2rem;
+}
+
+.produto-card {
+    background-color: var(--cor-branca);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.produto-card:hover {
+    transform: translateY(-1rem);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.produto-imagem {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 1.5rem;
+}
+
+.produto-nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--cor-do-texto)
+}
+
+.produto-descricao {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.produto-preco {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.produto-botao {
+    width: 100%;
+    background-color: var(--cor-de-destaque);
+    color: var(--cor-branca);
+    border: none;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.produto-botao:hover {
+    background-color: #3aa8f1;
+}
+
+.produto-botao:active {
+    transform: scale(0.95);
 }
