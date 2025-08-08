@@ -1,12 +1,6 @@
-/* 
-    [x] Colocar produtos na tela
-    [x] Saber quem são os produtos
-    [x] Onde colocar os produtos
-    [] Estilizar os produtos
-    [] Filtrar produtos pelo menu
-    [] Filtrar produtos pelo input
-*/
 
+let textoPesquisa = "";
+let categoriaAtual = "all";
 let produtos = [
 
     {
@@ -99,12 +93,23 @@ let produtos = [
 ];
 
 let produtosContainer = document.querySelector(".produtos-container")
+let pesquisaInput = document.querySelector(".pesquisa-entrada")
+let botoes = document.querySelectorAll(".categoria-botao");
 
 function mostrarProdutos() {
 
     let htmlProdutos = "";
 
-    produtos.forEach(produto => {
+    let produtosFiltrados = produtos.filter(filtrarProdutosPeloNome => {
+
+        let passouCategoria = (categoriaAtual === "all" || filtrarProdutosPeloNome.categoria === categoriaAtual);
+
+        let passouPesquisa = filtrarProdutosPeloNome.nome.toLocaleLowerCase().includes(textoPesquisa.toLowerCase());
+
+        return passouPesquisa && passouCategoria;
+    });
+
+    produtosFiltrados.forEach(produto => {
 
         htmlProdutos = htmlProdutos + `
             <div class="produto-card">
@@ -122,6 +127,38 @@ function mostrarProdutos() {
     produtosContainer.innerHTML = htmlProdutos
 
 }
+
+function pesquisar() {
+    textoPesquisa = pesquisaInput.value;
+    mostrarProdutos();
+}
+
+function trocarCategoria(categoria) {
+    categoriaAtual = categoria;
+
+    botoes.forEach(botao => {
+        botao.classList.remove("ativo");
+
+        if (botao.getAttribute("data-categoria") === categoria) {
+            botao.classList.add("ativo");
+        }
+    });
+
+    mostrarProdutos()
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    mostrarProdutos();
+    pesquisaInput.addEventListener("input", pesquisar);
+
+    botoes.forEach(botao => {
+        botao.addEventListener("click", () => {
+            let categoria = botao.getAttribute("data-categoria");
+
+            trocarCategoria(categoria);
+        });
+    });
+});
 
 window.onload = mostrarProdutos
 
