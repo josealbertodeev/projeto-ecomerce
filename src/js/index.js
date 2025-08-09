@@ -161,5 +161,3 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 window.onload = mostrarProdutos
-
-
