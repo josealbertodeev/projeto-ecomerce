@@ -4,7 +4,7 @@ Um e-commerce moderno e responsivo para produtos de tecnologia, desenvolvido com
 
 ## 🚀 Demonstração
 
-<img width="1333" height="859" alt="Screenshot_1" src="https://github.com/user-attachments/assets/566f14d3-1f60-4007-ae75-da5ff9f3e7cc" />
+![ecomerce](https://github.com/user-attachments/assets/adb697bd-bf91-4b87-ac21-e6e7dabc9c53)
 
 ## ✨ Funcionalidades
 
