@@ -116,7 +116,7 @@ O projeto foi desenvolvido com abordagem **mobile-first** e inclui:
 
 **José Alberto**
 - GitHub: [josealbertodeev](https://github.com/josealbertodeev)
-- LinkedIn: [José Alberto B Farias](https://www.linkedin.com/in/josé-alberto-b-farias)
+- LinkedIn: [José Alberto B Farias](https://www.linkedin.com/in/joséalberto)
 
 Acesse o site do projeto 👉 [aqui](https://projeto-ecomerce.vercel.app)
 
